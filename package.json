@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Aprendiendo JS FullStack ",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "start": "node index.js",
+    "start":"node .",
     "dev": "nodemon index.js"
   },
   "repository": {
