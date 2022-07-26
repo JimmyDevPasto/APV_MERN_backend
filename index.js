@@ -10,7 +10,7 @@ app.use(express.json());
 dotenv.config(); 
 conectarDB();
 
-const dominiosPermitidos= [process.env.FRONTEND_URL];
+const dominiosPermitidos= ['https://dashing-dusk-568d55.netlify.app/'];
 
 const corsOptions= {
     origin:function (origin,callback) {
