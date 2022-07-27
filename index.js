@@ -25,24 +25,24 @@ conectarDB();
 
 //  app.use(cors(corsOptions)); 
 
-// app.use(cors({
-//     origin: '*'
-//     }));
-// app.use((req,res,next)=>{
-//     res.header('Access-Control-Allow-Origin','*');
-//     res.header('Access-Control-Allow-Headers','Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Access-Control-Allow-Request-Method');
-//     res.header('Access-Control-Allow-Methods','GET, PUT, POST, DELETE, OPTIONS');
-//     res.header('Allow','GET, PUT, POST, DELETE, OPTIONS');
-//     next();
-//     });
-
-app.use((req, res, next) => {
-    res.set("Access-Control-Allow-Credentials", "true");
-    res.set("Access-Control-Allow-Origin", "https://dashing-dusk-568d55.netlify.app");
-    res.set("Access-Control-Allow-Headers", "Content-Type");
-    res.set("Access-Control-Allow-Methods", "OPTIONS,GET,PUT,POST,DELETE");
+app.use(cors({
+    origin: '*'
+    }));
+app.use((req,res,next)=>{
+    res.header('Access-Control-Allow-Origin','*');
+    res.header('Access-Control-Allow-Headers','Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Access-Control-Allow-Request-Method');
+    res.header('Access-Control-Allow-Methods','GET, PUT, POST, DELETE, OPTIONS');
+    res.header('Allow','GET, PUT, POST, DELETE, OPTIONS');
     next();
-  });
+    });
+
+// app.use((req, res, next) => {
+//     res.set("Access-Control-Allow-Credentials", "true");
+//     res.set("Access-Control-Allow-Origin", "https://dashing-dusk-568d55.netlify.app");
+//     res.set("Access-Control-Allow-Headers", "Content-Type");
+//     res.set("Access-Control-Allow-Methods", "OPTIONS,GET,PUT,POST,DELETE");
+//     next();
+//   });
 app.use("/api/veterinarios",veterinarioRoutes);
 app.use("/api/pacientes",pacienteRoutes);
 
