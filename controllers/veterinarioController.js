@@ -171,7 +171,7 @@ const nuevoPassword = async (req,res)=> {
 
 const actualizarPerfil = async (req,res)=>{
     
-    const veterinario = await Veterinario.findById(req.params.id); 
+    const veterinario = await Veterinario.findById(req.params._id); 
     if (!veterinario) {
         const error= new Error("Hubo un error");
         return res.status(400).json({msg:error.message});
