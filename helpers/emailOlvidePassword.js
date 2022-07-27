@@ -21,7 +21,7 @@ const emailOlvidePassword= async(datos)=>{
         text: 'Restablece tu Password',
         html: `<p>Hola: ${nombre}, has solicitado reestablecer tu password.</p>
         <p> Sigue el siguiente enlace para generar un nuevo password:
-        <a href="${process.env.FRONTEND_URL}/olvide-password/${token}">Reestablecer Password</a> </p> 
+        <a href="https://dashing-dusk-568d55.netlify.app/olvide-password/${token}">Reestablecer Password</a> </p> 
 
         <p> Si tu no solicistaste, puedes ignorar este mensaje </p>
         
